@@ -1,0 +1,288 @@
+/* =======================================
+   PORTFÓLIO - MAURO HENRIQUE
+   style.css
+======================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+:root{
+
+    --primaria:#2563eb;
+    --secundaria:#1e40af;
+    --fundo:#f5f7fb;
+    --card:#ffffff;
+    --texto:#222;
+    --texto-claro:#666;
+    --sombra:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:var(--fundo);
+    color:var(--texto);
+    line-height:1.7;
+
+}
+
+/* ================= HEADER ================= */
+
+header{
+
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    background:white;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 8%;
+
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+
+    z-index:999;
+
+}
+
+.logo h2{
+
+    color:var(--primaria);
+
+}
+
+nav{
+
+    display:flex;
+    gap:30px;
+
+}
+
+nav a{
+
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:var(--primaria);
+
+}
+
+/* ================= HERO ================= */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:120px 8% 80px;
+
+    gap:60px;
+
+}
+
+.texto{
+
+    flex:1;
+
+}
+
+.texto h1{
+
+    font-size:58px;
+    line-height:1.2;
+    margin-bottom:20px;
+
+}
+
+.texto span{
+
+    color:var(--primaria);
+
+}
+
+.texto h2{
+
+    color:var(--texto-claro);
+    margin-bottom:20px;
+
+}
+
+.texto p{
+
+    font-size:18px;
+    color:#555;
+    max-width:650px;
+    margin-bottom:35px;
+
+}
+
+.foto{
+
+    flex:1;
+    display:flex;
+    justify-content:center;
+
+}
+
+.foto img{
+
+    width:340px;
+    height:340px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:8px solid white;
+
+    box-shadow:var(--sombra);
+
+}
+
+/* ================= BOTÕES ================= */
+
+.botoes{
+
+    display:flex;
+    gap:20px;
+
+}
+
+.btn,
+.btn2{
+
+    padding:15px 30px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn{
+
+    background:var(--primaria);
+    color:white;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-4px);
+    background:var(--secundaria);
+
+}
+
+.btn2{
+
+    border:2px solid var(--primaria);
+    color:var(--primaria);
+
+}
+
+.btn2:hover{
+
+    background:var(--primaria);
+    color:white;
+
+}
+
+/* ================= SEÇÕES ================= */
+
+section{
+
+    padding:90px 8%;
+
+}
+
+section h2{
+
+    text-align:center;
+    font-size:38px;
+    margin-bottom:50px;
+    color:var(--primaria);
+
+}
+
+section>p{
+
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    color:#555;
+
+}
+
+/* ================= CARDS ================= */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:var(--card);
+
+    padding:30px;
+
+    border-radius:18px;
+
+    box-shadow:var(--sombra);
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.card i{
+
+    font-size:45px;
+    color:var(--primaria);
+    margin-bottom:20px;
+
+}
+
+.card h3{
+
+    margin-bottom:15px;
+
+}
+
+.card span{
+
+    color:var(--texto-claro);
+
+}
