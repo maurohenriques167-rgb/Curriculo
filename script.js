@@ -2,9 +2,12 @@
    PORTFÓLIO - MAURO HENRIQUE
 ===================================== */
 
+
 /* ==========================
    REVELAR ELEMENTOS
 ========================== */
+
+const elementos = document.querySelectorAll("section, .card, .skill");
 
 const observer = new IntersectionObserver((entries)=>{
 
@@ -20,45 +23,54 @@ const observer = new IntersectionObserver((entries)=>{
 
 },{threshold:0.2});
 
-document.querySelectorAll("section,.card,.skill").forEach(el=>{
 
-    observer.observe(el);
+elementos.forEach(elemento=>{
+
+    observer.observe(elemento);
 
 });
+
 
 
 /* ==========================
    NAVBAR
 ========================== */
 
-const header=document.querySelector("header");
+const header = document.querySelector("header");
 
-window.addEventListener("scroll",()=>{
 
-    if(window.scrollY>80){
+if(header){
 
-        header.classList.add("header-scroll");
+    window.addEventListener("scroll",()=>{
 
-    }else{
+        if(window.scrollY > 80){
 
-        header.classList.remove("header-scroll");
+            header.classList.add("header-scroll");
 
-    }
+        }else{
 
-});
+            header.classList.remove("header-scroll");
+
+        }
+
+    });
+
+}
+
 
 
 /* ==========================
    BOTÃO VOLTAR AO TOPO
 ========================== */
 
-const botao=document.createElement("button");
+const botao = document.createElement("button");
 
-botao.innerHTML="↑";
-
-botao.id="topo";
+botao.id = "topo";
+botao.innerHTML = "↑";
 
 document.body.appendChild(botao);
+
+
 
 botao.addEventListener("click",()=>{
 
@@ -72,9 +84,11 @@ botao.addEventListener("click",()=>{
 
 });
 
+
+
 window.addEventListener("scroll",()=>{
 
-    if(window.scrollY>400){
+    if(window.scrollY > 400){
 
         botao.classList.add("mostrar");
 
@@ -87,35 +101,38 @@ window.addEventListener("scroll",()=>{
 });
 
 
+
 /* ==========================
    ANIMAÇÃO DO TÍTULO
 ========================== */
 
-const titulo=document.querySelector(".texto h1");
+const span = document.querySelector(".texto h1 span");
 
-if(titulo){
+if(span){
 
-const textoOriginal=titulo.innerHTML;
+    const texto = span.textContent;
 
-titulo.innerHTML="";
+    span.textContent = "";
 
-let i=0;
+    let index = 0;
 
-function escrever(){
 
-    if(i<textoOriginal.length){
+    function escrever(){
 
-        titulo.innerHTML+=textoOriginal.charAt(i);
+        if(index < texto.length){
 
-        i++;
+            span.textContent += texto[index];
 
-        setTimeout(escrever,40);
+            index++;
+
+            setTimeout(escrever,80);
+
+        }
 
     }
 
-}
 
-escrever();
+    escrever();
 
 }
 
@@ -124,23 +141,33 @@ escrever();
    HOVER DOS CARDS
 ========================== */
 
-document.querySelectorAll(".card").forEach(card=>{
+const cards = document.querySelectorAll(".card");
 
-    card.addEventListener("mousemove",(e)=>{
 
-        const rect=card.getBoundingClientRect();
+cards.forEach(card=>{
 
-        const x=e.clientX-rect.left;
 
-        const y=e.clientY-rect.top;
+    card.addEventListener("mousemove",(evento)=>{
 
-        card.style.setProperty("--x",x+"px");
 
-        card.style.setProperty("--y",y+"px");
+        const area = card.getBoundingClientRect();
+
+
+        const x = evento.clientX - area.left;
+
+        const y = evento.clientY - area.top;
+
+
+        card.style.setProperty("--x",`${x}px`);
+
+        card.style.setProperty("--y",`${y}px`);
+
 
     });
 
+
 });
+
 
 
 console.log("Portfólio carregado!");
