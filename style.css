@@ -286,3 +286,86 @@ section>p{
     color:var(--texto-claro);
 
 }
+/* ==========================
+   ANIMAÇÕES
+========================== */
+
+section,
+.card,
+.skill{
+
+    opacity:0;
+    transform:translateY(40px);
+    transition:.8s;
+
+}
+
+.show{
+
+    opacity:1;
+    transform:translateY(0);
+
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.header-scroll{
+
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(12px);
+
+}
+
+/* ==========================
+   BOTÃO TOPO
+========================== */
+
+#topo{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.4s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+}
+
+#topo.mostrar{
+
+    opacity:1;
+
+    pointer-events:auto;
+
+}
+
+#topo:hover{
+
+    transform:translateY(-6px);
+
+}
