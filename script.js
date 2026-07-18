@@ -102,40 +102,6 @@ window.addEventListener("scroll",()=>{
 
 
 
-/* ==========================
-   ANIMAÇÃO DO TÍTULO
-========================== */
-
-const span = document.querySelector(".texto h1 span");
-
-if(span){
-
-    const texto = span.textContent;
-
-    span.textContent = "";
-
-    let index = 0;
-
-
-    function escrever(){
-
-        if(index < texto.length){
-
-            span.textContent += texto[index];
-
-            index++;
-
-            setTimeout(escrever,80);
-
-        }
-
-    }
-
-
-    escrever();
-
-}
-
 
 /* ==========================
    HOVER DOS CARDS
