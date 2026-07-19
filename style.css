@@ -993,7 +993,7 @@ footer{
     .hero{
 
 
-        padding-top:420px;
+        padding-top:180px;
 
 
         flex-direction:column-reverse;
@@ -1213,6 +1213,84 @@ footer{
 
     }
 
+
+
+}
+.menu-toggle{
+
+    display:none;
+
+}
+
+
+/* CELULAR */
+
+@media(max-width:768px){
+
+
+header{
+
+    flex-direction:row;
+
+}
+
+
+.menu-toggle{
+
+    display:block;
+
+    background:none;
+
+    border:none;
+
+    font-size:32px;
+
+    color:var(--primaria);
+
+    cursor:pointer;
+
+}
+
+
+nav{
+
+    position:absolute;
+
+    top:75px;
+
+    left:0;
+
+    width:100%;
+
+    background:white;
+
+    padding:20px;
+
+    display:none;
+
+    flex-direction:column;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+}
+
+
+nav a{
+
+    width:100%;
+
+    padding:15px;
+
+    text-align:center;
+
+}
+
+
+nav.active{
+
+    display:flex;
+
+}
 
 
 }
