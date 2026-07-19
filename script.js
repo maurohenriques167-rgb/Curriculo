@@ -4,22 +4,51 @@
 
 
 /* ==========================
+   MENU MOBILE
+========================== */
+
+const menuButton = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
+
+
+if(menuButton && navMenu){
+
+    menuButton.addEventListener("click", ()=>{
+
+        navMenu.classList.toggle("active");
+
+    });
+
+
+    document.querySelectorAll("#nav-menu a").forEach(link=>{
+
+        link.addEventListener("click", ()=>{
+
+            navMenu.classList.remove("active");
+
+        });
+
+    });
+
+}
+
+
+
+/* ==========================
    REVELAR ELEMENTOS
 ========================== */
-const menu = document.querySelector(".menu-toggle");
-const nav = document.querySelector("nav");
 
 
-menu.addEventListener("click",()=>{
+const elementos = document.querySelectorAll(
+    "section, .card, .skill"
+);
 
-    nav.classList.toggle("active");
-
-});
-const elementos = document.querySelectorAll("section, .card, .skill");
 
 const observer = new IntersectionObserver((entries)=>{
 
+
     entries.forEach(entry=>{
+
 
         if(entry.isIntersecting){
 
@@ -27,9 +56,12 @@ const observer = new IntersectionObserver((entries)=>{
 
         }
 
+
     });
 
+
 },{threshold:0.2});
+
 
 
 elementos.forEach(elemento=>{
@@ -41,8 +73,9 @@ elementos.forEach(elemento=>{
 
 
 /* ==========================
-   NAVBAR
+   HEADER AO ROLAR
 ========================== */
+
 
 const header = document.querySelector("header");
 
@@ -50,6 +83,7 @@ const header = document.querySelector("header");
 if(header){
 
     window.addEventListener("scroll",()=>{
+
 
         if(window.scrollY > 80){
 
@@ -61,6 +95,7 @@ if(header){
 
         }
 
+
     });
 
 }
@@ -71,16 +106,21 @@ if(header){
    BOTÃO VOLTAR AO TOPO
 ========================== */
 
-const botao = document.createElement("button");
 
-botao.id = "topo";
-botao.innerHTML = "↑";
-
-document.body.appendChild(botao);
+const botaoTopo = document.createElement("button");
 
 
+botaoTopo.id = "topo";
 
-botao.addEventListener("click",()=>{
+botaoTopo.innerHTML="↑";
+
+
+document.body.appendChild(botaoTopo);
+
+
+
+botaoTopo.addEventListener("click",()=>{
+
 
     window.scrollTo({
 
@@ -90,86 +130,31 @@ botao.addEventListener("click",()=>{
 
     });
 
+
 });
 
 
 
 window.addEventListener("scroll",()=>{
 
+
     if(window.scrollY > 400){
 
-        botao.classList.add("mostrar");
+        botaoTopo.classList.add("mostrar");
 
     }else{
 
-        botao.classList.remove("mostrar");
+        botaoTopo.classList.remove("mostrar");
 
     }
 
-});
 
+});
 
 
 
 /* ==========================
-   HOVER DOS CARDS
+   LOG
 ========================== */
-
-const cards = document.querySelectorAll(".card");
-
-
-cards.forEach(card=>{
-
-
-    card.addEventListener("mousemove",(evento)=>{
-
-
-        const area = card.getBoundingClientRect();
-
-
-        const x = evento.clientX - area.left;
-
-        const y = evento.clientY - area.top;
-
-
-        card.style.setProperty("--x",`${x}px`);
-
-        card.style.setProperty("--y",`${y}px`);
-
-
-    });
-
-
-});
-const menuButton = document.getElementById("menu-toggle");
-
-const menu = document.getElementById("nav-menu");
-
-
-menuButton.addEventListener("click", ()=>{
-
-
-    menu.classList.toggle("active");
-
-
-});
-
-
-
-// fechar menu ao clicar em algum link
-
-document.querySelectorAll("#nav-menu a").forEach(link=>{
-
-
-    link.addEventListener("click", ()=>{
-
-        menu.classList.remove("active");
-
-    });
-
-
-});
-
-
 
 console.log("Portfólio carregado!");
