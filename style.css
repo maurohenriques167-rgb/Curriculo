@@ -651,35 +651,36 @@ footer{
 }/* =======================================
    RESPONSIVIDADE MOBILE
 ======================================= */
+/* ================= MENU MOBILE ================= */
 
+.menu-toggle{
+
+    display:none;
+
+}
+
+
+/* CELULAR */
 
 @media(max-width:768px){
-
-
-/* ================= HEADER ================= */
 
 
 header{
 
     height:70px;
 
-    padding:15px 20px;
-
     flex-direction:row;
 
-}
+    padding:15px 20px;
 
+}
 
 
 .logo h2{
 
-    font-size:22px;
+    font-size:20px;
 
 }
-
-
-
-/* ================= BOTÃO HAMBÚRGUER ================= */
 
 
 .menu-toggle{
@@ -696,14 +697,12 @@ header{
 
     cursor:pointer;
 
-    z-index:10001;
+    z-index:1000000;
 
 }
 
 
-
-/* ================= MENU MOBILE ================= */
-
+/* MENU ESCONDIDO */
 
 nav{
 
@@ -715,38 +714,29 @@ nav{
 
     width:100%;
 
-    height:auto;
-
-    max-height:calc(100vh - 70px);
-
-    overflow-y:auto;
-
     background:white;
 
     display:flex;
 
     flex-direction:column;
 
-    align-items:center;
-
-    gap:10px;
-
     padding:20px;
 
-    box-shadow:
+    gap:12px;
 
-    0 10px 25px rgba(0,0,0,.15);
-
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
 
     transform:translateY(-120%);
 
-    transition:.35s ease;
+    transition:.3s;
 
-    z-index:10000;
+    z-index:999999;
 
 }
 
 
+
+/* MENU ABERTO */
 
 nav.active{
 
@@ -758,17 +748,22 @@ nav.active{
 
 nav a{
 
+
     width:100%;
 
-    text-align:center;
-
     padding:16px;
+
+    text-align:center;
 
     background:#f5f7fb;
 
     border-radius:12px;
 
-    font-size:16px;
+    color:#333;
+
+    text-decoration:none;
+
+    font-weight:500;
 
 }
 
@@ -784,8 +779,7 @@ nav a:hover{
 
 
 
-/* ================= HERO ================= */
-
+/* HERO MOBILE */
 
 .hero{
 
@@ -793,11 +787,7 @@ nav a:hover{
 
     text-align:center;
 
-    padding:
-
-    120px 5% 60px;
-
-    gap:35px;
+    padding:120px 5% 60px;
 
 }
 
@@ -805,29 +795,10 @@ nav a:hover{
 
 .texto h1{
 
-    font-size:40px;
+    font-size:38px;
 
 }
 
-
-
-.texto h2{
-
-    font-size:20px;
-
-}
-
-
-
-.texto p{
-
-    font-size:16px;
-
-}
-
-
-
-/* ================= FOTO ================= */
 
 
 .foto img{
@@ -840,14 +811,9 @@ nav a:hover{
 
 
 
-/* ================= BOTÕES ================= */
-
-
 .botoes{
 
     flex-direction:column;
-
-    width:100%;
 
 }
 
@@ -864,7 +830,12 @@ nav a:hover{
 
 
 
-/* ================= SEÇÕES ================= */
+.cards{
+
+    grid-template-columns:1fr;
+
+}
+
 
 
 section{
@@ -874,41 +845,8 @@ section{
 }
 
 
-
-section h2{
-
-    font-size:30px;
-
-    margin-bottom:35px;
-
 }
 
-
-
-/* ================= CARDS ================= */
-
-
-.cards{
-
-    grid-template-columns:1fr;
-
-}
-
-
-
-.card{
-
-    padding:25px;
-
-}
-
-
-
-}
-
-
-
-/* ================= CELULARES PEQUENOS ================= */
 
 
 @media(max-width:400px){
@@ -921,22 +859,11 @@ section h2{
 }
 
 
-
 .foto img{
 
     width:180px;
 
     height:180px;
-
-}
-
-
-
-nav a{
-
-    font-size:14px;
-
-    padding:14px;
 
 }
 
