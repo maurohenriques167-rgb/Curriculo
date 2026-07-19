@@ -369,3 +369,7 @@ section,
     transform:translateY(-6px);
 
 }
+.hero{
+    opacity:1 !important;
+    transform:none !important;
+}
