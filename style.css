@@ -384,15 +384,21 @@ section,
 
     header{
 
-        flex-direction:column;
+    position:fixed;
 
-        gap:15px;
+    top:0;
 
-        padding:20px 5%;
+    left:0;
 
-        position:relative;
+    width:100%;
 
-    }
+    flex-direction:row;
+
+    justify-content:space-between;
+
+    padding:20px 5%;
+
+}
 
 
     nav{
