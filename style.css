@@ -373,3 +373,194 @@ section,
     opacity:1 !important;
     transform:none !important;
 }
+/* ==========================
+   RESPONSIVIDADE MOBILE
+========================== */
+
+@media(max-width:768px){
+
+
+    /* HEADER */
+
+    header{
+
+        flex-direction:column;
+
+        gap:15px;
+
+        padding:20px 5%;
+
+        position:relative;
+
+    }
+
+
+    nav{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:15px;
+
+    }
+
+
+    nav a{
+
+        font-size:14px;
+
+    }
+
+
+
+    /* HERO */
+
+    .hero{
+
+        flex-direction:column-reverse;
+
+        text-align:center;
+
+        padding:50px 5%;
+
+        gap:30px;
+
+    }
+
+
+
+    .texto h1{
+
+        font-size:38px;
+
+    }
+
+
+
+    .texto h2{
+
+        font-size:20px;
+
+    }
+
+
+
+    .texto p{
+
+        font-size:16px;
+
+    }
+
+
+
+    /* FOTO */
+
+    .foto img{
+
+        width:220px;
+
+        height:220px;
+
+    }
+
+
+
+    /* BOTÕES */
+
+    .botoes{
+
+        flex-direction:column;
+
+        width:100%;
+
+    }
+
+
+
+    .btn,
+    .btn2{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+
+
+    /* SEÇÕES */
+
+    section{
+
+        padding:60px 5%;
+
+    }
+
+
+    section h2{
+
+        font-size:30px;
+
+        margin-bottom:35px;
+
+    }
+
+
+
+    /* CARDS */
+
+    .cards{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .card{
+
+        padding:25px;
+
+    }
+
+
+
+}
+
+
+
+/* CELULARES PEQUENOS */
+
+@media(max-width:400px){
+
+
+    .texto h1{
+
+        font-size:32px;
+
+    }
+
+
+    .foto img{
+
+        width:180px;
+
+        height:180px;
+
+    }
+
+
+    nav{
+
+        gap:10px;
+
+    }
+
+
+    nav a{
+
+        font-size:13px;
+
+    }
+
+}
