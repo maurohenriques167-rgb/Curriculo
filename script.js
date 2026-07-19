@@ -133,6 +133,34 @@ cards.forEach(card=>{
 
 
 });
+const menuButton = document.getElementById("menu-toggle");
+
+const menu = document.getElementById("nav-menu");
+
+
+menuButton.addEventListener("click", ()=>{
+
+
+    menu.classList.toggle("active");
+
+
+});
+
+
+
+// fechar menu ao clicar em algum link
+
+document.querySelectorAll("#nav-menu a").forEach(link=>{
+
+
+    link.addEventListener("click", ()=>{
+
+        menu.classList.remove("active");
+
+    });
+
+
+});
 
 
 
