@@ -1,18 +1,16 @@
 /* =======================================
    PORTFÓLIO - MAURO HENRIQUE
-   style.css
+   STYLE.CSS CORRIGIDO
 ======================================= */
 
 
 /* ================= RESET ================= */
 
 *{
-
     margin:0;
     padding:0;
     box-sizing:border-box;
     scroll-behavior:smooth;
-
 }
 
 
@@ -29,10 +27,10 @@
     --texto:#222;
     --texto-claro:#666;
 
-    --sombra:
-    0 10px 25px rgba(0,0,0,.08);
+    --sombra:0 10px 25px rgba(0,0,0,.08);
 
 }
+
 
 
 /* ================= BODY ================= */
@@ -50,6 +48,7 @@ body{
 }
 
 
+
 /* ================= HEADER ================= */
 
 header{
@@ -61,9 +60,7 @@ header{
 
     width:100%;
 
-
     background:white;
-
 
     display:flex;
 
@@ -71,21 +68,16 @@ header{
 
     align-items:center;
 
-
     padding:18px 8%;
-
 
     box-shadow:
     0 2px 15px rgba(0,0,0,.08);
 
-
-    z-index:999999;
-
+    z-index:9999;
 
 }
 
 
-/* ================= LOGO ================= */
 
 .logo h2{
 
@@ -95,16 +87,16 @@ header{
 
 
 
-/* ================= MENU ================= */
+/* ================= MENU DESKTOP ================= */
 
 
 nav{
 
     display:flex;
 
-    gap:20px;
-
     align-items:center;
+
+    gap:20px;
 
 }
 
@@ -118,15 +110,11 @@ nav a{
 
     font-weight:500;
 
-
     padding:10px 15px;
-
 
     border-radius:10px;
 
-
     transition:.3s;
-
 
 }
 
@@ -134,10 +122,20 @@ nav a{
 
 nav a:hover{
 
-    color:white;
-
     background:var(--primaria);
 
+    color:white;
+
+}
+
+
+
+/* ================= BOTÃO MENU ================= */
+
+
+.menu-toggle{
+
+    display:none;
 
 }
 
@@ -148,36 +146,25 @@ nav a:hover{
 
 .hero{
 
-
     min-height:100vh;
-
 
     display:flex;
 
-
     align-items:center;
-
 
     justify-content:space-between;
 
-
-    padding:
-
-    120px 8% 80px;
-
+    padding:120px 8% 80px;
 
     gap:60px;
-
-
 
 }
 
 
+
 .texto{
 
-
     flex:1;
-
 
 }
 
@@ -185,16 +172,11 @@ nav a:hover{
 
 .texto h1{
 
-
     font-size:58px;
-
 
     line-height:1.2;
 
-
     margin-bottom:20px;
-
-
 
 }
 
@@ -202,9 +184,7 @@ nav a:hover{
 
 .texto span{
 
-
     color:var(--primaria);
-
 
 }
 
@@ -212,12 +192,9 @@ nav a:hover{
 
 .texto h2{
 
-
     color:var(--texto-claro);
 
-
     margin-bottom:20px;
-
 
 }
 
@@ -225,21 +202,16 @@ nav a:hover{
 
 .texto p{
 
-
     font-size:18px;
-
 
     color:#555;
 
-
     max-width:650px;
-
 
     margin-bottom:35px;
 
-
-
 }
+
 
 
 /* ================= FOTO ================= */
@@ -247,15 +219,11 @@ nav a:hover{
 
 .foto{
 
-
     flex:1;
-
 
     display:flex;
 
-
     justify-content:center;
-
 
 }
 
@@ -263,30 +231,20 @@ nav a:hover{
 
 .foto img{
 
-
     width:340px;
 
     height:340px;
 
-
     border-radius:50%;
-
 
     object-fit:cover;
 
+    border:8px solid white;
 
-    border:
-
-    8px solid white;
-
-
-    box-shadow:
-
-    var(--sombra);
-
-
+    box-shadow:var(--sombra);
 
 }
+
 
 
 /* ================= BOTÕES ================= */
@@ -294,12 +252,9 @@ nav a:hover{
 
 .botoes{
 
-
     display:flex;
 
-
     gap:20px;
-
 
 }
 
@@ -308,23 +263,15 @@ nav a:hover{
 .btn,
 .btn2{
 
-
-    padding:
-
-    15px 30px;
-
+    padding:15px 30px;
 
     border-radius:12px;
 
-
     text-decoration:none;
-
 
     font-weight:600;
 
-
     transition:.3s;
-
 
 }
 
@@ -332,11 +279,9 @@ nav a:hover{
 
 .btn{
 
-
     background:var(--primaria);
 
     color:white;
-
 
 }
 
@@ -344,12 +289,9 @@ nav a:hover{
 
 .btn:hover{
 
-
     transform:translateY(-4px);
 
-
     background:var(--secundaria);
-
 
 }
 
@@ -357,15 +299,9 @@ nav a:hover{
 
 .btn2{
 
-
-    border:
-
-    2px solid var(--primaria);
-
+    border:2px solid var(--primaria);
 
     color:var(--primaria);
-
-
 
 }
 
@@ -373,22 +309,16 @@ nav a:hover{
 
 .btn2:hover{
 
-
     background:var(--primaria);
-
 
     color:white;
 
-
-
-}
-/* ================= SEÇÕES ================= */
+}/* ================= SEÇÕES ================= */
 
 
 section{
 
     padding:90px 8%;
-
 
 }
 
@@ -396,19 +326,13 @@ section{
 
 section h2{
 
-
     text-align:center;
-
 
     font-size:38px;
 
-
     margin-bottom:50px;
 
-
     color:var(--primaria);
-
-
 
 }
 
@@ -416,19 +340,13 @@ section h2{
 
 section>p{
 
-
     max-width:900px;
-
 
     margin:auto;
 
-
     text-align:center;
 
-
     color:#555;
-
-
 
 }
 
@@ -439,18 +357,12 @@ section>p{
 
 .cards{
 
-
     display:grid;
 
-
     grid-template-columns:
-
     repeat(auto-fit,minmax(300px,1fr));
 
-
     gap:30px;
-
-
 
 }
 
@@ -458,22 +370,15 @@ section>p{
 
 .card{
 
-
     background:var(--card);
-
 
     padding:30px;
 
-
     border-radius:18px;
-
 
     box-shadow:var(--sombra);
 
-
     transition:.35s;
-
-
 
 }
 
@@ -481,10 +386,7 @@ section>p{
 
 .card:hover{
 
-
     transform:translateY(-10px);
-
-
 
 }
 
@@ -492,16 +394,11 @@ section>p{
 
 .card i{
 
-
     font-size:45px;
-
 
     color:var(--primaria);
 
-
     margin-bottom:20px;
-
-
 
 }
 
@@ -509,10 +406,7 @@ section>p{
 
 .card h3{
 
-
     margin-bottom:15px;
-
-
 
 }
 
@@ -520,10 +414,27 @@ section>p{
 
 .card span{
 
-
     color:var(--texto-claro);
 
+}
 
+
+
+.card a{
+
+    color:var(--primaria);
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+
+
+.card a:hover{
+
+    text-decoration:underline;
 
 }
 
@@ -534,19 +445,13 @@ section>p{
 
 .skills{
 
-
     display:flex;
-
 
     flex-wrap:wrap;
 
-
     justify-content:center;
 
-
     gap:15px;
-
-
 
 }
 
@@ -554,25 +459,17 @@ section>p{
 
 .skill{
 
-
     background:white;
-
 
     padding:12px 25px;
 
-
     border-radius:30px;
-
 
     box-shadow:var(--sombra);
 
-
     font-weight:500;
 
-
     transition:.3s;
-
-
 
 }
 
@@ -580,16 +477,11 @@ section>p{
 
 .skill:hover{
 
-
     background:var(--primaria);
-
 
     color:white;
 
-
     transform:translateY(-5px);
-
-
 
 }
 
@@ -600,18 +492,13 @@ section>p{
 
 .contato{
 
-
     display:flex;
-
 
     flex-direction:column;
 
-
     align-items:center;
 
-
     gap:15px;
-
 
 }
 
@@ -619,10 +506,7 @@ section>p{
 
 .contato p{
 
-
     font-size:18px;
-
-
 
 }
 
@@ -630,44 +514,9 @@ section>p{
 
 .contato i{
 
-
     color:var(--primaria);
-
 
     margin-right:10px;
-
-
-
-}
-
-
-
-/* ================= LINKS ================= */
-
-
-.card a{
-
-
-    color:var(--primaria);
-
-
-    text-decoration:none;
-
-
-    font-weight:600;
-
-
-
-}
-
-
-
-.card a:hover{
-
-
-    text-decoration:underline;
-
-
 
 }
 
@@ -680,16 +529,11 @@ section,
 .card,
 .skill{
 
-
     opacity:0;
-
 
     transform:translateY(40px);
 
-
     transition:.8s;
-
-
 
 }
 
@@ -697,29 +541,21 @@ section,
 
 .show{
 
-
     opacity:1;
 
-
     transform:translateY(0);
-
-
 
 }
 
 
-/* mantém a primeira tela aparecendo */
 
+/* Mantém a primeira tela visível */
 
 .hero{
 
-
     opacity:1 !important;
 
-
     transform:none !important;
-
-
 
 }
 
@@ -730,15 +566,9 @@ section,
 
 .header-scroll{
 
-
-    background:
-
-    rgba(255,255,255,.95);
-
+    background:rgba(255,255,255,.95);
 
     backdrop-filter:blur(12px);
-
-
 
 }
 
@@ -749,64 +579,37 @@ section,
 
 #topo{
 
-
     position:fixed;
-
 
     right:30px;
 
-
     bottom:30px;
-
-
 
     width:55px;
 
-
     height:55px;
-
-
 
     border:none;
 
-
     border-radius:50%;
-
-
 
     background:var(--primaria);
 
-
-
     color:white;
-
-
 
     font-size:22px;
 
-
-
     cursor:pointer;
-
-
 
     opacity:0;
 
-
-
     pointer-events:none;
 
-
-
     transition:.4s;
-
-
 
     box-shadow:
 
     0 10px 25px rgba(0,0,0,.2);
-
-
 
 }
 
@@ -814,13 +617,9 @@ section,
 
 #topo.mostrar{
 
-
     opacity:1;
 
-
     pointer-events:auto;
-
-
 
 }
 
@@ -828,10 +627,7 @@ section,
 
 #topo:hover{
 
-
     transform:translateY(-6px);
-
-
 
 }
 
@@ -842,397 +638,48 @@ section,
 
 footer{
 
-
     background:white;
-
 
     text-align:center;
 
-
     padding:25px;
-
 
     margin-top:50px;
 
-
-
     color:#555;
 
-
-
-}
-/* =======================================
+}/* =======================================
    RESPONSIVIDADE MOBILE
 ======================================= */
 
 
-/* ================= TABLETS E CELULARES ================= */
-
-
 @media(max-width:768px){
 
 
-    /* HEADER FIXO */
-
-    header{
-
-
-        flex-direction:column;
-
-
-        padding:15px 20px;
-
-
-        height:auto;
-
-
-        z-index:999999;
-
-
-
-    }
-
-
-
-    .logo{
-
-
-        width:100%;
-
-
-        text-align:center;
-
-
-
-    }
-
-
-
-    /* MENU MOBILE */
-
-
-    nav{
-
-
-        width:100%;
-
-
-        display:flex;
-
-
-        flex-direction:column;
-
-
-        gap:10px;
-
-
-        margin-top:15px;
-
-
-
-    }
-
-
-
-
-    nav a{
-
-
-        width:100%;
-
-
-        display:flex;
-
-
-        justify-content:center;
-
-
-        align-items:center;
-
-
-
-        padding:15px;
-
-
-
-        background:#f5f7fb;
-
-
-
-        border-radius:12px;
-
-
-
-        font-size:16px;
-
-
-
-    }
-
-
-
-    nav a:hover{
-
-
-        background:var(--primaria);
-
-
-        color:white;
-
-
-
-    }
-
-
-
-
-
-    /* ESPAÇO PARA O HEADER NÃO COBRIR O CONTEÚDO */
-
-
-    .hero{
-
-
-        padding-top:180px;
-
-
-        flex-direction:column-reverse;
-
-
-        text-align:center;
-
-
-        gap:35px;
-
-
-
-    }
-
-
-
-
-    /* TEXTO */
-
-
-    .texto h1{
-
-
-        font-size:40px;
-
-
-
-    }
-
-
-
-
-    .texto h2{
-
-
-        font-size:20px;
-
-
-
-    }
-
-
-
-
-
-    .texto p{
-
-
-        font-size:16px;
-
-
-
-    }
-
-
-
-
-
-    /* FOTO */
-
-
-    .foto img{
-
-
-        width:220px;
-
-
-        height:220px;
-
-
-
-    }
-
-
-
-
-
-    /* BOTÕES */
-
-
-    .botoes{
-
-
-        flex-direction:column;
-
-
-        width:100%;
-
-
-
-    }
-
-
-
-
-    .btn,
-    .btn2{
-
-
-        width:100%;
-
-
-        text-align:center;
-
-
-
-    }
-
-
-
-
-    /* SEÇÕES */
-
-
-    section{
-
-
-        padding:
-
-        60px 5%;
-
-
-
-    }
-
-
-
-
-
-    section h2{
-
-
-        font-size:30px;
-
-
-        margin-bottom:35px;
-
-
-
-    }
-
-
-
-
-    /* CARDS */
-
-
-    .cards{
-
-
-        grid-template-columns:1fr;
-
-
-
-    }
-
-
-
-
-    .card{
-
-
-        padding:25px;
-
-
-
-    }
-
-
-
-
-}
-
-
-
-/* ================= CELULARES PEQUENOS ================= */
-
-
-@media(max-width:400px){
-
-
-
-    .texto h1{
-
-
-        font-size:32px;
-
-
-
-    }
-
-
-
-    .foto img{
-
-
-        width:180px;
-
-
-        height:180px;
-
-
-
-    }
-
-
-
-    nav a{
-
-
-        font-size:14px;
-
-
-        padding:13px;
-
-
-
-    }
-
-
-
-}
-.menu-toggle{
-
-    display:none;
-
-}
-
-
-/* CELULAR */
-
-@media(max-width:768px){
+/* ================= HEADER ================= */
 
 
 header{
 
+    height:70px;
+
+    padding:15px 20px;
+
     flex-direction:row;
 
 }
+
+
+
+.logo h2{
+
+    font-size:22px;
+
+}
+
+
+
+/* ================= BOTÃO HAMBÚRGUER ================= */
 
 
 .menu-toggle{
@@ -1249,46 +696,247 @@ header{
 
     cursor:pointer;
 
+    z-index:10001;
+
 }
+
+
+
+/* ================= MENU MOBILE ================= */
 
 
 nav{
 
-    position:absolute;
+    position:fixed;
 
-    top:75px;
+    top:70px;
 
     left:0;
 
     width:100%;
 
+    height:auto;
+
+    max-height:calc(100vh - 70px);
+
+    overflow-y:auto;
+
     background:white;
 
-    padding:20px;
-
-    display:none;
+    display:flex;
 
     flex-direction:column;
 
-    box-shadow:0 10px 25px rgba(0,0,0,.1);
+    align-items:center;
+
+    gap:10px;
+
+    padding:20px;
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,.15);
+
+
+    transform:translateY(-120%);
+
+    transition:.35s ease;
+
+    z-index:10000;
 
 }
+
+
+
+nav.active{
+
+    transform:translateY(0);
+
+}
+
 
 
 nav a{
 
     width:100%;
 
-    padding:15px;
+    text-align:center;
+
+    padding:16px;
+
+    background:#f5f7fb;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+}
+
+
+
+nav a:hover{
+
+    background:var(--primaria);
+
+    color:white;
+
+}
+
+
+
+/* ================= HERO ================= */
+
+
+.hero{
+
+    flex-direction:column-reverse;
+
+    text-align:center;
+
+    padding:
+
+    120px 5% 60px;
+
+    gap:35px;
+
+}
+
+
+
+.texto h1{
+
+    font-size:40px;
+
+}
+
+
+
+.texto h2{
+
+    font-size:20px;
+
+}
+
+
+
+.texto p{
+
+    font-size:16px;
+
+}
+
+
+
+/* ================= FOTO ================= */
+
+
+.foto img{
+
+    width:220px;
+
+    height:220px;
+
+}
+
+
+
+/* ================= BOTÕES ================= */
+
+
+.botoes{
+
+    flex-direction:column;
+
+    width:100%;
+
+}
+
+
+
+.btn,
+.btn2{
+
+    width:100%;
 
     text-align:center;
 
 }
 
 
-nav.active{
 
-    display:flex;
+/* ================= SEÇÕES ================= */
+
+
+section{
+
+    padding:60px 5%;
+
+}
+
+
+
+section h2{
+
+    font-size:30px;
+
+    margin-bottom:35px;
+
+}
+
+
+
+/* ================= CARDS ================= */
+
+
+.cards{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.card{
+
+    padding:25px;
+
+}
+
+
+
+}
+
+
+
+/* ================= CELULARES PEQUENOS ================= */
+
+
+@media(max-width:400px){
+
+
+.texto h1{
+
+    font-size:32px;
+
+}
+
+
+
+.foto img{
+
+    width:180px;
+
+    height:180px;
+
+}
+
+
+
+nav a{
+
+    font-size:14px;
+
+    padding:14px;
 
 }
 
